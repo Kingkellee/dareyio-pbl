@@ -36,7 +36,9 @@ df -h
 - Create a single partition in each of the three disk
 
 ```
-sudo gdisk /dev/xvdf /dev/xvdg /dev/xvdh
+sudo gdisk /dev/xvdf
+sudo gdisk /dev/xvdg
+sudo gdisk /dev/xvdh
 ```
 
 ![](images/project6/gdisk.png)

@@ -127,19 +127,20 @@ sudo chmod -R 777 /mnt
 - Artifacts are stored on Jenkins server locally in;
 
 ```
-ls /var/lib/jenkins/jobs/tooling_github/builds/<build_number>/archive/
+ls /var/lib/jenkins/jobs/<jenkins_prject_name>/builds/<build_number>/archive/
 ```
 
 ![](images/project9/what-archive.png)
 
 ## Configure Jenkins to Copy Files to NFS Server via SSH
 
-- Install `Publish Over SSH` Plugin - Goto the main dashboard  
-   - Select `Manage Jenkins` - Choose `Manage Plugins` from the menu items - On `Available` tab search for `Publish Over SSH` plugin and click on `install without restart`
-  ![](images/project9/Publish-Over-SSH.png)
+- Install `Publish Over SSH` Plugin - Goto the main dashboard
+
+  - Select `Manage Jenkins` - Choose `Manage Plugins` from the menu items - On `Available` tab search for `Publish Over SSH` plugin and click on `install without restart`
+    ![](images/project9/Publish-Over-SSH.png)
 
 - Configure the job/project to copy artifacts over to NFS server. - On the `Main Dashboard`, Select `Manage Jenkins` - Click on `Configure System` - Scroll to `Publish Over SSH` Plugin Configuration Section 1. Provide a private key
-  ` # copy the content of your pem file cat <private-key>.pem ` 1. Provide an Arbtiary Name 1. Host Name: `<PRIVATE-IP-ADDRESS>` of NFS server 1. Username: `ec2-user` because the EC2 instance is Red Hat Linux 1. Remote directory: `/mnt/apps` 1. Test the configuration and make sure the connection returns `Success`. 1. Save the Configuration
+  `# copy the content of your pem file cat <private-key>.pem` 1. Provide an Arbtiary Name 1. Host Name: `<PRIVATE-IP-ADDRESS>` of NFS server 1. Username: `ec2-user` because the EC2 instance is Red Hat Linux 1. Remote directory: `/mnt/apps` 1. Test the configuration and make sure the connection returns `Success`. 1. Save the Configuration
   ![](images/project9/configure-ssh.png)
 
 - Add another `Post Build Action` - Click on `Add Post Build Action` - Select `Send build artifacts over SSH` - on Source files to archive, input `**` - Click Save

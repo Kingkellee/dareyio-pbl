@@ -4,7 +4,7 @@
 
 In this Project, I attempted to further the Improvements of [ansibile-config-mgt](https://github.com/Kingkellee/ansible-config-mgt/tree/prj-11) Repository used in [Project11](https://github.com/Kingkellee/dareyio-pbl/blob/master/project11.md).
 
-> Code Refactoring is the process of making changes to our source code or without generally making changing the expected behaviour of the software.
+> Code Refactoring is the process of making changes to our source code without generally changing the expected behaviour of the software.
 > In DevOps it involves improving the internal structure or operation of a code or component without changing its external behavior.
 
 - At the end of this project, I will be extending the functionality of the Ansible architecture, refactor our Ansible code, create assignments, and make use of imports functionality.

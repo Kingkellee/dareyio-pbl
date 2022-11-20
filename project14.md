@@ -263,17 +263,21 @@ pipeline {
   - Create a pull request to merge the latest code into the main branch
   - After merging the PR, go back into your terminal and switch into the main branch.
   - Pull the latest change.
-  - Create a new branch, add more stages into the Jenkins file to simulate below phases. (Just add an echo command like we have in build and test stages) 1. Package 1. Deploy 1. Clean up
-    ![Jenkinsfile](images/project14/optional-task.svg)
+  - Create a new branch, add more stages into the Jenkins file to simulate below phases. (Just add an echo command like we have in build and test stages)
+    1. Package
+    1. Deploy
+    1. Clean up
 
-  ```
-  git checkout feature/jenkinspipeline-stages -b feature/optional-task
-  ```
+![Jenkinsfile](images/project14/optional-task.svg)
 
-  - Verify in Blue Ocean that all the stages are working
-    ![optional-task-build](images/project14/multi-branch-other-task.png)
-  - merge your feature branch to the main/master branch your main/master branch should have a successful pipeline like this in blue ocean
-    ![merge-optional-task](images/project14/merge-optional-task.png)
+```
+git checkout feature/jenkinspipeline-stages -b feature/optional-task
+```
+
+- Verify in Blue Ocean that all the stages are working
+  ![optional-task-build](images/project14/multi-branch-other-task.png)
+- merge your feature branch to the main/master branch your main/master branch should have a successful pipeline like this in blue ocean
+  ![merge-optional-task](images/project14/merge-optional-task.png)
 
 ## Running Ansible Playbook from Jenkins
 

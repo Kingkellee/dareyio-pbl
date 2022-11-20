@@ -718,3 +718,6 @@ export ANSIBLE_CONFIG=/home/ubuntu/ansible-config/deploy/ansible.cfg
 #
 
 # Video Showing the Pipeline Run
+
+https://user-images.githubusercontent.com/55467245/202891188-ce549b9e-c2e5-4bd9-a6cc-bbd4809b89de.mp4
+

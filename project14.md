@@ -345,7 +345,7 @@ environment {
 
 - Open port 8082 in artifactory security group
 
-- Login into the Artifactory server `http://artifactory-public-ip:8082 and enter username and password (admin, password), create new password
+- Login into the Artifactory server `http://<artifactory-public-ip>:8082` and enter username and password (admin, password), create new password
   ![](images/project14/login-jfrog.png)
 
 ![](images/project14/change-jfrog-password.png)
@@ -723,4 +723,3 @@ export ANSIBLE_CONFIG=/home/ubuntu/ansible-config/deploy/ansible.cfg
 # Video Showing the Pipeline Run
 
 https://user-images.githubusercontent.com/55467245/202891188-ce549b9e-c2e5-4bd9-a6cc-bbd4809b89de.mp4
-

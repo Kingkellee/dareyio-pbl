@@ -9,11 +9,12 @@ In this project, I will be Configuring a CI/CD Pipeline using Jenkins and Ansibl
 1.  **CONTINUOUS INTEGRATION**:
     Continuous Integration (CI) is a practice of merging all developers’ working copies to a shared mainline (e.g., Git Repository or some other version control system) several times per day. Frequent merges reduce chances of any conflicts in code and allow to run tests more often to avoid massive rework if something goes wrong. This principle can be formulated as Commit early, push often.
 
-         The general workflow of CI process Include
-         - __Run tests Locally__: Test Driven Development is commonly used in combination with CI before developers commit their work to avoid one developers work-in-progress code from breaking other developers copy of the code base.
-         - __Compile Code in CI__:after codes have been tested locally, developers commit and push their work to a central repository, a dedicated CI server picksup the code and runs the build there.
-         - __Run further test in CI__: It is important to run the unit-tests on the CI server there are other kinds of tests and code analysis that can be run using CI server. These are extremely critical to determining the overall quality of code being developed, how it interacts with other developers’ work, and how vulnerable it is to attacks. A CI server can use different tools for Static Code Analysis, Code Coverage Analysis, Code smells Analysis, and Compliance Analysis. In addition, it can run other types of tests such as Integration and Penetration tests. Other tasks performed by a CI server include production of code documentation from the source code and facilitate manual quality assurance (QA) testing processes
-         - __Deploy an Artifact from CI__: Continuous Delivery which ensures that software checked into the mainline is always ready to be deployed to users. The deployment here is manually triggered after certain QA tasks are passed successfully. There is another CD known as Continuous Deployment which is also about deploying the software to the users, but rather than manual, it makes the entire process fully automated. Thus, Continuous Deployment is just one step ahead in automation than Continuous Delivery.
+    The general workflow of CI process Include
+
+    - **Run tests Locally:** Test Driven Development is commonly used in combination with CI before developers commit their work to avoid one developers work-in-progress code from breaking other developers copy of the code base.
+    - **Compile Code in CI**:after codes have been tested locally, developers commit and push their work to a central repository, a dedicated CI server picksup the code and runs the build there.
+    - **Run further test in CI**: It is important to run the unit-tests on the CI server there are other kinds of tests and code analysis that can be run using CI server. These are extremely critical to determining the overall quality of code being developed, how it interacts with other developers’ work, and how vulnerable it is to attacks. A CI server can use different tools for Static Code Analysis, Code Coverage Analysis, Code smells Analysis, and Compliance Analysis. In addition, it can run other types of tests such as Integration and Penetration tests. Other tasks performed by a CI server include production of code documentation from the source code and facilitate manual quality assurance (QA) testing processes
+    - **Deploy an Artifact from CI**: Continuous Delivery which ensures that software checked into the mainline is always ready to be deployed to users. The deployment here is manually triggered after certain QA tasks are passed successfully. There is another CD known as Continuous Deployment which is also about deploying the software to the users, but rather than manual, it makes the entire process fully automated. Thus, Continuous Deployment is just one step ahead in automation than Continuous Delivery.
 
     ![](images/project14/CI-Pipeline-Regular.jpg)
 
@@ -572,6 +573,8 @@ stage('Code Analysis') {
       }
   }
 ```
+
+![](images/project14/upload-artifactory.png)
 
 > The build job used in this step tells Jenkins to start another job. In this case it is the ansible-project job, and we are targeting the main branch. Hence, we have ansible-project/main. Since the Ansible project requires parameters to be passed in, we have included this by specifying the parameters section. The name of the parameter is env and its value is dev. Meaning, deploy to the Development environment.
 

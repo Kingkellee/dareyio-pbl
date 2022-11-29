@@ -583,5 +583,5 @@ Application Load Balancers
 Entering the url `https://www.wordpress.kingkellee.ga` or `wordpress.kingkellee.ga` will use nginx reverse proxy to route traffic from the External ALB to the wordpress site through the internal ALB:
 ![](images/project15/wordpress.png)
 
-Entering the url `https://www.tooling.kingkellee.ga` or `tooling.kingkellee.ga` will use nginx reverse proxy to route traffic from the External ALB to the wordpress site through the internal ALB:
+Entering the url `https://www.tooling.kingkellee.ga` or `tooling.kingkellee.ga` will use nginx reverse proxy to route traffic from the External ALB to the tooling site through the internal ALB:
 ![](images/project15/tooling.png)
